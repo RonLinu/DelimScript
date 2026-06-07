@@ -2,6 +2,6 @@
 Improved CoffeeScript:
 - Whitespace is no more significant.
 - Robust code structure.
-- Clear closure of statements.
+- Clear visual termination of multi-line constructs.
 - Safe copy-pasting.
 - Safe auto-formatting.
