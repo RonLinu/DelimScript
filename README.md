@@ -1,4 +1,4 @@
-# DelimCoffee
+# CoffeeDelim
 Indentation-free CoffeeScript:
 - Whitespace-insensitive syntax.
 - Robust code structure.
