@@ -18,7 +18,7 @@ preprocess = function(source) {
       }
       converted.push('  '.repeat(currentIndentation) + code);
       continue;
-    } else if (match = code.match(/(^###|'''|""")/)) {
+    } else if (match = code.match(/^(###|'''|""")/)) {
       multiline = match[1];
       stripped = code.replace(multiline);
       if (stripped.includes(multiline)) {
@@ -41,7 +41,7 @@ preprocess = function(source) {
       }
     }
     
-    // Trailing colon or arrow: open code block
+    // Trailing colon or arrow: open code block (ignore line if comment)
     if (/^(?!#).*(:|->|=>)$/.test(code)) {
       nextIndentation++;
       if (/\bswitch\b[^'"]*:$/.test(code)) {

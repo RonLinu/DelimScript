@@ -14,8 +14,8 @@ preprocess = (source) ->
       if code.endsWith(multiline) then multiline = ''
       converted.push '  '.repeat(currentIndentation) + code
       continue
-    else if match = code.match(/(^###|'''|""")/)
-      multiline = match[1]
+    else if match = code.match(/^(###|'''|""")/)
+      multiline = match[1] #or match[2] or match[3]
       stripped = code.replace(multiline)
       if stripped.includes(multiline) then multiline = ''
       converted.push '  '.repeat(currentIndentation) + code
